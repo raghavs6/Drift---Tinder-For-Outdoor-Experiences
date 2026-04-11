@@ -20,6 +20,32 @@ Drift is designed to feel less like a directory and more like a smart outdoor gu
 | See why a pick fits you | Organize by board or mood | Use live weather and timing context |
 | Get weather-aware suggestions | Build shortlists fast | Go outside faster |
 
+## Product Tour
+
+### Welcome
+
+Sign in and step straight into a personalized outdoor shortlist.
+
+![Drift welcome screen](docs/screenshots/welcome-sign-in.png)
+
+### Onboarding
+
+Set your home base, travel range, and outdoor vibe so the deck starts tuned to you.
+
+![Drift onboarding flow](docs/screenshots/onboarding-vibe.png)
+
+### Discover
+
+Swipe through curated experiences with live weather, Drifty guidance, and clear "why now" context.
+
+![Drift discover dashboard](docs/screenshots/discover-dashboard.png)
+
+### Collections
+
+Turn saved picks into a planning board with featured options, sorting, and trip-planning flows.
+
+![Drift collections board](docs/screenshots/collections-board.png)
+
 ## Core Experience
 
 ### 1. Onboarding
