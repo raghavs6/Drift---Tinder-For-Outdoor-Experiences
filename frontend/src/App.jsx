@@ -108,7 +108,7 @@ export default function App() {
   );
   const [authBusy, setAuthBusy] = useState(false);
   const [authReady, setAuthReady] = useState(() => !hasSupabaseConfig);
-  const [screen, setScreen] = useState("onboarding");
+  const [screen, setScreen] = useState(() => (hasSupabaseConfig ? "welcome" : "onboarding"));
   const [tab, setTab] = useState("discover");
   const [prefs, setPrefs] = useState(() => mergePrefs(null));
   const [experiences, setExperiences] = useState(SEEDED_EXPERIENCES);
@@ -287,6 +287,7 @@ export default function App() {
   useEffect(() => {
     if (!hasSupabaseConfig || !supabase) {
       setAuthReady(true);
+      setScreen("onboarding");
       return undefined;
     }
 
@@ -388,7 +389,7 @@ export default function App() {
     return <WelcomeScreen onContinueWithGoogle={handleGoogleSignIn} authBusy={authBusy} />;
   }
 
-  if (screen === "onboarding") {
+  if (screen === "onboarding" && (!hasSupabaseConfig || session)) {
     return <OnboardingScreen onComplete={handleOnboardingComplete} locationOptions={locationOptions} />;
   }
 
